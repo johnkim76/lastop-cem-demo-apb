@@ -1,0 +1,26 @@
+version: 1.0
+name: lastop-cem-demo-apb
+description: APB for ASB Last Operation & Custom Error Message Demo
+bindable: False
+async: optional
+metadata:
+  displayName: Demo (APB)
+  longDescription: A sample APB which fails to demo the Custom Error Message mode
+  providerDisplayName: "Red Hat, Inc."
+plans:
+  - name: last-op
+    description: A sample APB demonstrating the Last Operation ASB Module
+    free: True
+    metadata:
+      displayName: ASB Last Operation Demo
+      longDescription: This plan deploys a simple APB to show the ASB's Last Operation Module in action
+      cost: $0.00
+    parameters: []
+  - name: custom-err-msg
+    description: A sample APB demonstrating the Custom Error Message
+    free: True
+    metadata:
+      displayName: Custom Error Message Demo
+      longDescription: This plan deploys a simple APB to purposefully fail so that a Custom Error Message can be displayed in the WebUI
+      cost: $0.00
+    parameters: []

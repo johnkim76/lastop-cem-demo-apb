@@ -1,0 +1,13 @@
+- name: update_last_op
+  asb_last_operation:
+    description: "Custom Error Message Demo: [We are about to fail this APB...]"
+
+- pause:
+    seconds: 10
+
+- name: Writting Termination Message '{{ terminationMessagePathFile }}'
+  shell: echo "CUSTOM ERROR MESSAGE Demo APB - Failed on Purpose!" > {{ terminationMessagePathFile }}
+
+- name: fail the play intentionally
+  fail:
+    msg: "We have intentionally FAILED the APB provision!"
